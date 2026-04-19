@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gravity Painter</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="wrap">
+  <div id="canvas-wrap">
+    <canvas id="c"></canvas>
+    <div id="hint">Click to place a planet — particles will orbit around it</div>
+  </div>
+  <div id="ui">
+    <button class="btn on" onclick="setTool('planet',this)">Planet</button>
+    <button class="btn" onclick="setTool('black',this)">Black hole</button>
+    <button class="btn" onclick="setTool('repel',this)">Repulsor</button>
+    <button class="btn" onclick="setTool('erase',this)">Erase</button>
+    <button class="btn" onclick="clearAll()">Clear</button>
+    <div class="sep"></div>
+    <div class="ctrl"><span>Size</span><input type="range" min="8" max="60" step="1" value="20" id="psize"><span id="psize-v">20</span></div>
+    <div class="ctrl"><span>Particles</span><input type="range" min="200" max="3000" step="100" value="1000" id="pcount"><span id="pcount-v">1000</span></div>
+    <div class="ctrl"><span>Speed</span><input type="range" min="1" max="10" step="1" value="4" id="spd"><span id="spd-v">4</span></div>
+    <div class="ctrl"><span>Trail</span><input type="range" min="1" max="30" step="1" value="10" id="trail"><span id="trail-v">10</span></div>
+    <div class="ctrl"><span>Gravity</span><input type="range" min="1" max="20" step="1" value="8" id="grav"><span id="grav-v">8</span></div>
+    <div class="sep"></div>
+    <div id="palettes" style="display:flex;gap:5px;"></div>
+    <div class="sep"></div>
+    <button id="fs-btn" onclick="toggleFS()">Fullscreen</button>
+    <span id="stats"></span>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
