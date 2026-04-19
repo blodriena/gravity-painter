@@ -53,6 +53,8 @@ function setTool(t, el) {
   el.classList.add('on');
 }
 
+
+
 function resize() {
   const wrap = document.getElementById('canvas-wrap');
   W = canvas.width = wrap.clientWidth;
