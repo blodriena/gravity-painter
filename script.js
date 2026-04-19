@@ -47,10 +47,6 @@ sliderBind('trail','trail-v');
 sliderBind('grav','grav-v');
 sliderBind('pcount','pcount-v', v => respawnParticles());
 
-
-
-
-
 function setTool(t, el) {
   tool = t;
   document.querySelectorAll('#ui .btn').forEach(b => b.classList.remove('on'));
