@@ -72,6 +72,7 @@ function makeParticle() {
     trail: [],
   };
 }
+
 function respawnParticles() {
   const n = +document.getElementById('pcount').value;
   particles = [];
