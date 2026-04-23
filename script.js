@@ -112,7 +112,6 @@ canvas.addEventListener('touchstart', e => { e.preventDefault(); const p = getPo
 canvas.addEventListener('touchend',   e => { e.preventDefault(); if (!holding) return; holding = false; placeBody(holdX, holdY); }, { passive: false });
 canvas.addEventListener('touchmove',  e => { e.preventDefault(); const p = getPos(e); holdX = p.x; holdY = p.y; }, { passive: false });
 
-
 function toggleFS() {
   if (!document.fullscreenElement) {
     document.documentElement.requestFullscreen();
