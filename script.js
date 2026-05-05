@@ -105,6 +105,8 @@ function placeBody(x, y) {
   }
 }
 
+
+
 canvas.addEventListener('mousedown', e => { const p = getPos(e); holding = true; holdX = p.x; holdY = p.y; });
 canvas.addEventListener('mouseup',   e => { if (!holding) return; holding = false; placeBody(holdX, holdY); });
 canvas.addEventListener('mousemove', e => { if (holding) { const p = getPos(e); holdX = p.x; holdY = p.y; } });
